@@ -24,6 +24,7 @@ export default {
       axios.post('http://localhost/pushApi.php', { text: this.newTask })
         .then(response => {
           this.todoArray = response.data;
+          this.newTask = "";
           console.log('Nuovo compito aggiunto con successo:', this.todoArray);
         })
         .catch(error => {
